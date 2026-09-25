@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LUCKY DEV – Bots & Channels</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--ac:#38bdf8;--ac2:#a78bfa;--bg:#070b14;--cd:#0d1424;--bd:#1b2744;--tx:#e8eefc;--mu:#8b97b5}
+*{box-sizing:border-box;margin:0}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background:radial-gradient(600px 400px at 85% 0,#a78bfa38,transparent),radial-gradient(600px 420px at 0 30%,#38bdf838,transparent),radial-gradient(#ffffff16 1px,transparent 1px);background-size:auto,auto,22px 22px}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#070b14cc;backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.lg{font:700 17px 'Space Grotesk';text-decoration:none;color:var(--tx);letter-spacing:.3px}.lg span{color:var(--ac)}
+.jn{background:var(--tx);color:#000;font:700 12px 'Space Grotesk';padding:9px 16px;border-radius:99px;text-decoration:none}
+.wrap{max-width:560px;margin:auto;padding:34px 18px 90px}
+.hero{text-align:center;padding:10px 0 26px}
+.ava{width:104px;height:104px;margin:0 auto 16px;position:relative}
+.ring{width:100%;height:100%;border-radius:50%;background:conic-gradient(from 0deg,var(--ac),var(--ac2),var(--ac));padding:4px;box-sizing:border-box;overflow:hidden}
+.ph{width:100%;height:100%;border-radius:50%;overflow:hidden;background:#101a33;border:3px solid var(--bg);box-sizing:border-box;display:grid;place-items:center}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph span{font:700 30px 'Space Grotesk';color:var(--tx)}
+.tick{position:absolute;right:-2px;bottom:0;width:30px;height:30px;display:block;border-radius:50%;animation:glow 2s ease-in-out infinite}
+.tick svg{width:100%;height:100%;display:block}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 4px #1d9bf0cc) drop-shadow(0 0 10px #1d9bf066) drop-shadow(0 2px 4px #000c)}50%{filter:drop-shadow(0 0 8px #1d9bf0) drop-shadow(0 0 18px #38bdf8aa) drop-shadow(0 2px 4px #000c)}}
+@media(prefers-reduced-motion:reduce){.tick{animation:none}}
+h1{font:700 26px 'Space Grotesk';display:flex;gap:8px;justify-content:center;align-items:center;letter-spacing:.2px}
+.star{width:.6em;height:.6em}
+.bio{color:var(--mu);margin-top:8px;font-size:14.5px;max-width:420px;margin-inline:auto}
+.pill{display:inline-block;font:400 11px 'JetBrains Mono',monospace;color:var(--ac);border:1px solid #38bdf880;background:#38bdf81a;padding:5px 12px;border-radius:8px;margin-bottom:10px;letter-spacing:.4px}
+.tb{display:flex;gap:8px;justify-content:center;margin:18px 0}
+.tb button{background:var(--cd);color:var(--mu);border:1px solid var(--bd);border-radius:99px;padding:9px 18px;font:600 13px Manrope;cursor:pointer}
+.tb button.on{background:var(--ac);color:#04101c;border-color:var(--ac)}
+.sr{width:100%;background:var(--cd);color:var(--tx);border:1px solid var(--bd);border-radius:12px;padding:11px 14px;font:14px Manrope;margin-bottom:16px}
+#items{display:grid;gap:12px}
+.it{display:flex;gap:14px;align-items:center;background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:16px}
+.em{width:52px;height:52px;flex:none;border-radius:15px;background:#152244;display:grid;place-items:center;font-size:26px}
+.it div.ci{flex:1;min-width:0}.it b{display:block;font-size:15.5px;font-family:'Space Grotesk'}.it small{color:var(--ac);font:12px 'JetBrains Mono',monospace}.it p{color:var(--mu);font-size:13.5px;margin-top:4px}
+.it a{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#04101c;font:700 13px 'Space Grotesk';padding:9px 15px;border-radius:10px;text-decoration:none;flex:none}
+.mu{text-align:center;color:var(--mu);padding:40px 0}
+.fab{position:fixed;right:16px;bottom:16px;width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font-size:24px;text-decoration:none;box-shadow:0 8px 24px #0008}
+footer{text-align:center;color:var(--mu);font:12px 'JetBrains Mono',monospace;padding:8px 18px 4px}footer a{color:var(--mu);cursor:pointer;margin-left:10px}
+#adm{position:fixed;top:0;left:0;right:0;bottom:0;z-index:20;background:#030710e6;display:none;overflow:auto;padding:14px}#adm.on{display:block}
+.pn{max-width:520px;margin:40px auto;background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:20px}
+.pn h2{display:flex;justify-content:space-between;font-size:19px;font-family:'Space Grotesk';margin-bottom:6px}
+.pn h3{color:var(--ac);font:700 14px 'Space Grotesk';margin:18px 0 8px}
+.pn label{display:block;font-size:12.5px;color:var(--mu);margin:10px 0 4px}
+.pn input,.pn select,.pn textarea{width:100%;background:#0a1226;color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;font:14px Manrope}
+.pn textarea{min-height:60px}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.bt{background:var(--ac);color:#04101c;border:0;border-radius:10px;padding:11px 16px;font:700 14px Manrope;cursor:pointer;margin-top:12px;margin-right:8px}
+.bt.g{background:#1b2a4d;color:var(--tx)}.bt.r{background:#3a1a24;color:#ff8fa3}
+.li{display:flex;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13.5px}
+.li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.li button{padding:6px 10px;margin:0;font-size:12px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+</style></head><body>
+<nav><a class="lg" href="index.html" id="lg"></a><a class="jn" id="jn" target="_blank" rel="noopener">JOIN CHANNEL</a></nav>
+<div class="wrap">
+ <div class="hero">
+  <div class="ava"><div class="ring"><div class="ph" id="ph"></div></div><span class="tick">
+   <svg viewBox="0 0 24 24"><path fill="#1d9bf0" d="M12 1l2.6 2 3.2-.3 1.2 3 2.9 1.5-.6 3.2L23 12l-1.7 2.6.6 3.2-2.9 1.5-1.2 3-3.2-.3L12 23l-2.6-2-3.2.3-1.2-3-2.9-1.5.6-3.2L1 12l1.7-2.6-.6-3.2 2.9-1.5 1.2-3 3.2.3z"/><path d="M8 12.3l2.7 2.7 5.6-5.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </span></div>
+  <div class="pill">TELEGRAM BOT &amp; AUTOMATION DEVELOPER</div>
+  <h1 id="nm"></h1>
+  <p class="bio">Custom Telegram bots aur automation API bots banata hu. Fast, clean aur reliable. 🚀</p>
+ </div>
+ <input class="sr" id="sr" placeholder="🔍 Search bot ya channel..." oninput="render()">
+ <div class="tb" id="tb"></div>
+ <div id="items"></div>
+ <footer>© 2026 LUCKY DEV<a onclick="openAdmin()">admin</a></footer>
+</div>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Contact">💬</a>
+
+<div id="adm"><div class="pn">
+ <h2>⚙️ Admin <button class="bt g" onclick="adm.classList.remove('on')">✕</button></h2>
+ <h3 id="ftitle">Bot / Channel add karo</h3>
+ <div class="row">
+  <div><label>Type</label><select id="iT"><option value="bot">🤖 Bot</option><option value="channel">📢 Channel</option></select></div>
+  <div><label>Emoji</label><input id="iE" placeholder="🤖"></div>
+ </div>
+ <label>Naam</label><input id="iN">
+ <label>Username (bina @ ke)</label><input id="iU">
+ <label>Description</label><textarea id="iD"></textarea>
+ <button class="bt" onclick="saveItem()">Save</button><button class="bt g" onclick="clearForm()">Clear</button>
+ <h3>Sab items (unlimited add kar sakte ho)</h3>
+ <div id="list"></div>
+</div></div>
+
+<script>
+const K='luckydev_v3',$=i=>document.getElementById(i),PASS='lucky123';
+const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const U=u=>/^(https?:\/\/|tg:)/.test(u||'')?u:'https://t.me/luckydev';
+const DEF={name:'LUCKY DEV',dp:'',joinLink:'https://t.me/luckydev',botsLink:'https://t.me/luckydev_bot',telegramLink:'https://t.me/luckydev',supportLink:'https://t.me/luckydev',
+items:[{id:'1',type:'bot',emoji:'🤖',name:'Lucky Bot',user:'luckydev_bot',desc:'Mera main automation bot'},{id:'2',type:'channel',emoji:'📢',name:'Lucky Dev Channel',user:'luckydev',desc:'Updates aur naye bots'}]};
+function load(){let s={};try{s=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}return{...DEF,...s,items:(s.items&&s.items.length?s.items:DEF.items)}}
+function save(){try{const cur=JSON.parse(localStorage.getItem(K)||'{}');localStorage.setItem(K,JSON.stringify({...cur,items:D.items}))}catch(e){alert('Save fail ho gaya ❌')}}
+let D=load(),tab='all',eid=null;
+function render(){
+ $('lg').innerHTML=E(D.name.split(' ')[0]||'LUCKY')+'<span>'+(D.name.split(' ').slice(1).join(' ')?' . '+E(D.name.split(' ').slice(1).join(' ')):'')+'</span>';
+ $('jn').href=U(D.joinLink);$('fab').href=U(D.supportLink);
+ $('ph').innerHTML=D.dp?`<img src="${E(D.dp)}" alt="${E(D.name)}">`:`<span>${E(D.name.slice(0,2).toUpperCase())}</span>`;
+ $('nm').innerHTML=E(D.name)+' <svg class="star" viewBox="0 0 24 24"><defs><linearGradient id="pg"><stop offset="0" stop-color="#6c8cff"/><stop offset="1" stop-color="#d05cff"/></linearGradient></defs><path fill="url(#pg)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>';
+ document.title=D.name+' – Bots & Channels';
+ $('tb').innerHTML=[['all','Sab'],['bot','🤖 Bots'],['channel','📢 Channels']].map(t=>`<button class="${tab==t[0]?'on':''}" onclick="tab='${t[0]}';render()">${t[1]}</button>`).join('');
+ const q=($('sr').value||'').toLowerCase();
+ let L=D.items.filter(x=>tab=='all'||x.type==tab);
+ if(q)L=L.filter(x=>(x.name+' '+x.user+' '+(x.desc||'')).toLowerCase().includes(q));
+ $('items').innerHTML=L.length?L.map(x=>`<div class="it"><div class="em">${E(x.emoji||(x.type=='bot'?'🤖':'📢'))}</div><div class="ci"><b>${E(x.name)}</b><small>${x.type=='bot'?'BOT':'CHANNEL'} · @${E(x.user)}</small><p>${E(x.desc||'')}</p></div><a target="_blank" rel="noopener" href="https://t.me/${E(x.user)}">Open</a></div>`).join(''):'<p class="mu">Kuch nahi mila.</p>';
+ $('list').innerHTML=D.items.map(x=>`<div class="li"><span>${E(x.emoji||'')} ${E(x.name)} (@${E(x.user)})</span><button class="bt g" onclick="editItem('${x.id}')">Edit</button><button class="bt r" onclick="delItem('${x.id}')">Delete</button></div>`).join('')||'<p class="mu">Koi item nahi</p>';
+}
+function openAdmin(){
+ let ok=false;try{ok=sessionStorage.getItem('adm')=='1'}catch(e){}
+ if(!ok){const p=prompt('Admin password:');if(p!==PASS)return alert('Galat password ❌');try{sessionStorage.setItem('adm','1')}catch(e){}}
+ clearForm();adm.classList.add('on');
+}
+function saveItem(){
+ const n=$('iN').value.trim(),u=$('iU').value.trim().replace(/^@/,'');
+ if(!n||!u)return alert('Naam aur username zaroori hai');
+ const o={id:eid||String(Date.now()),type:$('iT').value,emoji:$('iE').value.trim(),name:n,user:u,desc:$('iD').value.trim()};
+ D.items=eid?D.items.map(x=>x.id==eid?o:x):[...D.items,o];
+ save();clearForm();render();
+}
+function editItem(id){const x=D.items.find(i=>i.id==id);if(!x)return;eid=id;
+ $('iT').value=x.type;$('iE').value=x.emoji||'';$('iN').value=x.name;$('iU').value=x.user;$('iD').value=x.desc||'';
+ $('ftitle').textContent='Edit kar rahe ho ✏️';$('iN').focus();}
+function delItem(id){if(!confirm('Delete karna hai?'))return;D.items=D.items.filter(x=>x.id!=id);save();render();}
+function clearForm(){eid=null;['iE','iN','iU','iD'].forEach(x=>$(x).value='');$('ftitle').textContent='Bot / Channel add karo';}
+addEventListener('storage',e=>{if(e.key==K){D=load();render()}});
+render();if(location.hash=='#admin')openAdmin();
+</script></body></html>
