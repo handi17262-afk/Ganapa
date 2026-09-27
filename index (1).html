@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LUCKY DEV</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--ac:#38bdf8;--ac2:#a78bfa;--gold:#f5c26b;--bg:#060910;--cd:#0d1424;--cd2:#111b32;--bd:#213256;--tx:#eef3ff;--mu:#8b97b5}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;top:0;left:0;right:0;bottom:0;z-index:-2;
+ background:
+  radial-gradient(560px 360px at 88% -6%,#a78bfa40,transparent),
+  radial-gradient(560px 380px at -4% 26%,#38bdf840,transparent),
+  radial-gradient(420px 300px at 60% 92%,#f5c26b1c,transparent),
+  radial-gradient(#ffffff14 1px,transparent 1px),
+  linear-gradient(180deg,#060910,#080d18 40%,#060910);
+ background-size:auto,auto,auto,22px 22px,auto}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(140% 90% at 50% 0%,transparent 55%,#060910d0 100%)}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#060910b8;backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid #ffffff14;box-shadow:0 1px 0 #38bdf81a}
+.lg{font:700 17px 'Space Grotesk';letter-spacing:.5px}
+.lg span{background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.jn{background:linear-gradient(180deg,#fff,#dfe6f5);color:#04101c;font:700 12px 'Space Grotesk';padding:9px 16px;border-radius:99px;text-decoration:none;box-shadow:0 4px 14px #0009,inset 0 1px 0 #fff}
+section,header{max-width:560px;margin:auto;padding:34px 18px}
+header{text-align:center;padding-top:46px;animation:rise .7s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.ava{width:140px;height:140px;margin:0 auto 20px;position:relative}
+.ava::before{content:"";position:absolute;inset:-22px;border-radius:50%;background:radial-gradient(circle,#38bdf84a,transparent 65%);filter:blur(4px);animation:pulse 3.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.ava::before{animation:none}}
+.ring{width:100%;height:100%;border-radius:50%;background:conic-gradient(from 0deg,var(--ac),var(--ac2),var(--gold),var(--ac));padding:4px;box-sizing:border-box;overflow:hidden;box-shadow:0 10px 30px #000a}
+.ph{width:100%;height:100%;border-radius:50%;overflow:hidden;background:#101a33;border:3px solid var(--bg);box-sizing:border-box;display:grid;place-items:center}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph span{font:700 40px 'Space Grotesk';color:var(--tx)}
+.tick{position:absolute;right:0;bottom:4px;width:34px;height:34px;display:block;border-radius:50%;animation:glow 2.2s ease-in-out infinite}
+.tick svg{width:100%;height:100%;display:block}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 4px #1d9bf0cc) drop-shadow(0 0 10px #1d9bf066) drop-shadow(0 2px 4px #000c)}50%{filter:drop-shadow(0 0 9px #1d9bf0) drop-shadow(0 0 18px #38bdf8aa) drop-shadow(0 2px 4px #000c)}}
+@media(prefers-reduced-motion:reduce){.tick{animation:none}}
+.badge{display:inline-flex;align-items:center;gap:5px;font:700 10.5px 'Space Grotesk';letter-spacing:.8px;color:#1a1305;background:linear-gradient(90deg,var(--gold),#ffe1a3);padding:5px 12px 5px 10px;border-radius:99px;margin-bottom:12px;box-shadow:0 4px 14px #f5c26b33}
+.pill{display:inline-block;font:400 11px 'JetBrains Mono',monospace;color:var(--ac);border:1px solid #38bdf880;background:#38bdf81a;padding:6px 14px;border-radius:8px;letter-spacing:.5px;backdrop-filter:blur(6px)}
+h1{font:700 40px/1.15 'Space Grotesk';margin:16px 0 10px;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;word-break:break-word;text-shadow:0 0 30px #38bdf83a}
+.star{width:.62em;height:.62em;flex:none}
+.ds{color:var(--mu);max-width:420px;margin:auto;font-size:15px}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btns a{position:relative;overflow:hidden;padding:15px 28px;border-radius:13px;font:700 13.5px 'Space Grotesk';letter-spacing:.5px;text-decoration:none;transition:transform .15s}
+.btns a:active{transform:scale(.96)}
+.btn1{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#04101c;box-shadow:0 10px 28px #38bdf84a,inset 0 1px 0 #ffffff66}
+.btn1::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(115deg,transparent,#ffffffb0,transparent);animation:sweep 3.2s ease-in-out infinite}
+@keyframes sweep{0%{left:-60%}55%,100%{left:130%}}
+@media(prefers-reduced-motion:reduce){.btn1::after{animation:none}}
+.btn2{background:#ffffff08;color:var(--tx);border:1px solid #ffffff26;backdrop-filter:blur(8px)}
+h2{font:700 25px 'Space Grotesk';margin-bottom:6px;position:relative;display:inline-block}
+h2 b{color:var(--ac)}
+h2::after{content:"";display:block;width:46px;height:3px;border-radius:3px;margin-top:8px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
+section>h2{margin-bottom:18px}
+pre{position:relative;background:linear-gradient(#0e1730,#0d1424);border:1px solid #ffffff14;border-radius:16px;padding:18px;font:13px/1.7 'JetBrains Mono',monospace;color:#c7d5f5;white-space:pre-wrap;overflow-x:auto;box-shadow:0 12px 30px -14px #000c,inset 0 1px 0 #ffffff12}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sg div,.sv div{background:linear-gradient(#101c38,#0d1424);border:1px solid #ffffff14;border-radius:16px;padding:18px;box-shadow:0 10px 26px -16px #000d,inset 0 1px 0 #ffffff10;transition:transform .18s}
+.sg div:active,.sv div:active{transform:scale(.98)}
+.sg b{display:block;font:700 27px 'Space Grotesk';background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sg small{color:var(--mu);font-size:13px}
+.sk{margin-bottom:16px}.sk p{display:flex;justify-content:space-between;font:12px 'JetBrains Mono',monospace;margin-bottom:6px}
+.sk s{display:block;height:7px;border-radius:9px;background:#0e1730;overflow:hidden;border:1px solid #ffffff10}
+.sk s i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--gold));box-shadow:0 0 12px #38bdf866}
+.sv{display:grid;gap:12px}.sv b{display:block;font:700 16.5px 'Space Grotesk'}.sv span{color:var(--mu);font-size:14px}
+.ct{position:relative;background:linear-gradient(#101c38,#0d1424);border:1px solid #ffffff16;border-radius:22px;margin:34px 18px;padding:28px;max-width:524px;box-shadow:0 20px 50px -24px #000f,inset 0 1px 0 #ffffff12}
+.ct h2{margin-bottom:8px}.ct p{color:var(--mu);margin-bottom:16px;font-size:14.5px}
+.ct a{display:inline-block;color:#04101c;background:linear-gradient(90deg,var(--ac),var(--ac2));font:700 13px 'Space Grotesk';text-decoration:none;padding:13px 22px;border-radius:11px;box-shadow:0 10px 26px #38bdf844}
+.rd{text-align:center;font:700 26px 'Space Grotesk';padding:46px 18px 6px;background:linear-gradient(90deg,var(--tx),var(--ac2),var(--tx));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.4px}
+footer{text-align:center;color:var(--mu);font:12px 'JetBrains Mono',monospace;padding:16px 18px 90px}
+footer a{color:var(--mu);cursor:pointer;margin-left:10px}
+.fab{position:fixed;right:16px;bottom:16px;width:54px;height:54px;border-radius:17px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font-size:22px;text-decoration:none;box-shadow:0 10px 28px #000b,0 0 0 4px #38bdf822}
+#adm{position:fixed;top:0;left:0;right:0;bottom:0;z-index:20;background:#030710ea;display:none;overflow:auto;padding:14px;backdrop-filter:blur(4px)}#adm.on{display:block}
+.pn{max-width:420px;margin:60px auto;background:linear-gradient(#101c38,#0d1424);border:1px solid #ffffff18;border-radius:20px;padding:20px;box-shadow:0 30px 70px -20px #000f}
+.pn h2{display:flex;justify-content:space-between;font-size:19px;margin-bottom:14px}
+.pn h2::after{display:none}
+.pn label{display:block;font-size:12.5px;color:var(--mu);margin:12px 0 5px}
+.pn input{width:100%;background:#0a1226;color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:11px 12px;font:14px Manrope}
+.bt{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#04101c;border:0;border-radius:10px;padding:12px 18px;font:700 14px Manrope;cursor:pointer;margin-top:16px;width:100%;box-shadow:0 8px 20px #38bdf83a}
+.bt.g{background:#1b2a4d;color:var(--tx);width:auto;margin:0;box-shadow:none}
+#boot{position:fixed;inset:0;z-index:999;background:#04070d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .5s ease,visibility .5s}
+#boot.hide{opacity:0;visibility:hidden;pointer-events:none}
+#boot::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,#ffffff08 0 1px,transparent 1px 3px);pointer-events:none}
+#boot::after{content:"";position:absolute;inset:0;background:radial-gradient(500px 320px at 50% 40%,#38bdf822,transparent)}
+.term{position:relative;width:min(86vw,380px);font:13px/1.7 'JetBrains Mono',monospace;color:#7ee0ff;text-shadow:0 0 8px #38bdf880;min-height:150px}
+.term b{color:var(--gold);text-shadow:0 0 8px #f5c26b80}
+.cursor{display:inline-block;width:8px;height:14px;background:#7ee0ff;box-shadow:0 0 8px #38bdf8;vertical-align:-2px;animation:blink .9s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.bootbar{position:relative;width:min(86vw,380px);height:3px;border-radius:3px;background:#ffffff14;overflow:hidden}
+.bootbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--gold));box-shadow:0 0 10px #38bdf8a0;transition:width .25s linear}
+.bootlogo{font:700 15px 'Space Grotesk';letter-spacing:2px;color:var(--tx);opacity:.85}
+.bootlogo span{color:var(--ac)}
+@media(prefers-reduced-motion:reduce){#boot{display:none}}
+</style></head><body>
+<div id="boot"><div class="bootlogo">LUCKY<span>.DEV</span></div><div class="term" id="bootTxt"></div><div class="bootbar"><i id="bootBarI"></i></div><div style="font:11px 'JetBrains Mono',monospace;color:#8b97b5;margin-top:6px">tap to skip</div></div>
+<nav><span class="lg" id="lg"></span><a class="jn" id="jc" target="_blank" rel="noopener">JOIN CHANNEL</a></nav>
+<header>
+ <div class="ava"><div class="ring"><div class="ph" id="ph"></div></div><span class="tick">
+  <svg viewBox="0 0 24 24"><path fill="#1d9bf0" d="M12 1l2.6 2 3.2-.3 1.2 3 2.9 1.5-.6 3.2L23 12l-1.7 2.6.6 3.2-2.9 1.5-1.2 3-3.2-.3L12 23l-2.6-2-3.2.3-1.2-3-2.9-1.5.6-3.2L1 12l1.7-2.6-.6-3.2 2.9-1.5 1.2-3 3.2.3z"/><path d="M8 12.3l2.7 2.7 5.6-5.6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </span></div>
+ <div class="badge">⚡ TOP RATED DEVELOPER</div><br>
+ <div class="pill">TELEGRAM BOT &amp; AUTOMATION DEVELOPER</div>
+ <h1 id="nm"></h1>
+ <p class="ds">Custom Telegram bots aur automation API bots banata hu. Fast, clean aur reliable. 🚀</p>
+ <div class="btns">
+  <a class="btn1" id="b1" target="_blank" rel="noopener">VIEW MY BOTS</a>
+  <a class="btn2" id="b0" target="_blank" rel="noopener">TELEGRAM</a>
+ </div>
+ <div style="margin-top:16px"><a href="channels.html" style="color:var(--ac);font:600 13px Manrope;text-decoration:none">📢 Bots &amp; Channels list dekhein →</a></div>
+</header>
+
+<section><pre>// who_is_lucky
+const developer = {
+  name: "Lucky Dev",
+  speciality: "Custom Telegram Bots",
+  skills: ["Automation", "API", "Payments"],
+  mission: "Bots that work while you sleep."
+};</pre></section>
+
+<section><h2>LIVE <b>COUNTERS</b></h2>
+ <div class="sg">
+  <div><b>150+</b><small>Bots built</small></div>
+  <div><b>5,000+</b><small>Active users</small></div>
+  <div><b>99.9%</b><small>Uptime</small></div>
+  <div><b>24/7</b><small>Support</small></div>
+ </div>
+</section>
+
+<section><h2>SKILL <b>INVENTORY</b></h2>
+ <div id="sk">
+  <div class="sk"><p><span>Bot Automation</span><span>98%</span></p><s><i style="width:98%"></i></s></div>
+  <div class="sk"><p><span>API Integration</span><span>94%</span></p><s><i style="width:94%"></i></s></div>
+  <div class="sk"><p><span>Payments &amp; Webhooks</span><span>90%</span></p><s><i style="width:90%"></i></s></div>
+ </div>
+</section>
+
+<section><h2>WHAT I <b>BUILD</b></h2>
+ <div class="sv">
+  <div><b>Custom Telegram Bots</b><span>Tumhari zaroorat ke hisaab se poora custom bot, shuru se banaya hua.</span></div>
+  <div><b>Automation &amp; API Bots</b><span>Auto-reply, moderation, alerts aur third-party API integration.</span></div>
+  <div><b>Payment Integration</b><span>UPI / payment gateway ke saath auto-delivery aur order tracking.</span></div>
+ </div>
+</section>
+
+<div class="ct">
+ <h2>Contact Us</h2>
+ <p>Custom Telegram bot chahiye? Message karo, idea ko bot bana denge.</p>
+ <a id="b2" target="_blank" rel="noopener">CONTACT ON TELEGRAM</a>
+</div>
+<div class="rd">READY TO LEVEL UP?</div>
+<footer>© 2026 LUCKY DEV<a onclick="openAdmin()">admin</a></footer>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Contact">💬</a>
+
+<div id="adm"><div class="pn">
+ <h2>⚙️ Admin <button class="bt g" onclick="adm.classList.remove('on')">✕</button></h2>
+ <label>Naam</label><input id="fN">
+ <label>DP photo</label><input type="file" accept="image/*" onchange="pickDp(this)">
+ <label>Join Channel link (top-right button)</label><input id="fJ" placeholder="https://t.me/aapka_channel">
+ <label>View My Bots link</label><input id="fB" placeholder="https://t.me/aapka_bot">
+ <label>Telegram button link</label><input id="fT" placeholder="https://t.me/username">
+ <label>Support / Contact button link</label><input id="fS" placeholder="https://t.me/username">
+ <button class="bt" onclick="saveAll()">Save</button>
+ <h3 style="color:var(--ac);font:700 14px 'Space Grotesk';margin:20px 0 6px">Sabko live dikhane ke liye (Publish)</h3>
+ <p style="color:var(--mu);font-size:12.5px;margin-bottom:8px">Export dabao, poora text copy karo, file ke PUBLISHED = null ki jagah paste karo, phir GitHub par file dubara upload karo.</p>
+ <textarea id="bk" style="width:100%;min-height:80px;background:#0a1226;color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:10px;font:12px 'JetBrains Mono',monospace"></textarea>
+ <button class="bt g" onclick="bk.value=JSON.stringify(D);bk.select()">Export</button>
+</div></div>
+
+<script>
+/* Admin panel se jo bhi badlo wo abhi sirf ISI browser me save hota hai (localStorage).
+   GitHub par SABKO wahi change dikhane ke liye: Admin panel me "Export" dabao, JSON copy karo,
+   niche PUBLISHED = null ki jagah paste karo, file save karke GitHub par dubara upload karo. */
+const PUBLISHED=null;
+const K='luckydev_v3',$=i=>document.getElementById(i),PASS='lucky123';
+const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const U=u=>/^(https?:\/\/|tg:)/.test(u||'')?u:'https://t.me/luckydev';
+const DEF={name:'LUCKY DEV',dp:'',joinLink:'https://t.me/luckydev',botsLink:'https://t.me/luckydev_bot',telegramLink:'https://t.me/luckydev',supportLink:'https://t.me/luckydev'};
+function load(){let s={};try{s=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}return{...DEF,...(PUBLISHED||{}),...s}}
+function save(){try{const cur=JSON.parse(localStorage.getItem(K)||'{}');localStorage.setItem(K,JSON.stringify({...cur,...D}))}catch(e){alert('Storage full: chhoti DP use karo')}}
+let D=load();
+function render(){
+ $('lg').innerHTML=E(D.name.split(' ')[0]||'LUCKY')+'<span>'+(D.name.split(' ').slice(1).join(' ')?' . '+E(D.name.split(' ').slice(1).join(' ')):'')+'</span>';
+ $('ph').innerHTML=D.dp?`<img src="${E(D.dp)}" alt="${E(D.name)}">`:`<span>${E(D.name.slice(0,2).toUpperCase())}</span>`;
+ $('nm').innerHTML=E(D.name)+' <svg class="star" viewBox="0 0 24 24"><defs><linearGradient id="pg"><stop offset="0" stop-color="#6c8cff"/><stop offset="1" stop-color="#d05cff"/></linearGradient></defs><path fill="url(#pg)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>';
+ document.title=D.name;
+ $('jc').href=U(D.joinLink);
+ $('b1').textContent='VIEW MY BOTS';$('b1').href=U(D.botsLink);
+ $('b0').textContent='TELEGRAM';$('b0').href=U(D.telegramLink);
+ $('b2').href=U(D.supportLink);$('fab').href=U(D.supportLink);
+}
+function openAdmin(){
+ let ok=false;try{ok=sessionStorage.getItem('adm')=='1'}catch(e){}
+ if(!ok){if(prompt('Admin password:')!==PASS)return alert('Galat password ❌');try{sessionStorage.setItem('adm','1')}catch(e){}}
+ $('fN').value=D.name;$('fJ').value=D.joinLink;$('fB').value=D.botsLink;$('fT').value=D.telegramLink;$('fS').value=D.supportLink;adm.classList.add('on');
+}
+function pickDp(i){const f=i.files[0];if(!f)return;const r=new FileReader();
+ r.onload=e=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas'),s=300,m=Math.min(im.width,im.height);c.width=c.height=s;
+  c.getContext('2d').drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,s,s);D.dp=c.toDataURL('image/jpeg',.85);save();render()};im.src=e.target.result};
+ r.readAsDataURL(f);
+}
+function saveAll(){D.name=$('fN').value.trim()||DEF.name;D.joinLink=$('fJ').value.trim()||DEF.joinLink;D.botsLink=$('fB').value.trim()||DEF.botsLink;D.telegramLink=$('fT').value.trim()||DEF.telegramLink;D.supportLink=$('fS').value.trim()||DEF.supportLink;save();render();alert('Save ho gaya ✅');adm.classList.remove('on')}
+addEventListener('storage',e=>{if(e.key==K){D=load();render()}});
+render();if(location.hash=='#admin')openAdmin();
+
+(function boot(){
+ const el=document.getElementById('boot'),tx=document.getElementById('bootTxt'),bar=document.getElementById('bootBarI');
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.remove();return}
+ document.body.style.overflow='hidden';
+ function finish(){if(!el.parentNode)return;el.classList.add('hide');document.body.style.overflow='';setTimeout(()=>el.remove(),600)}
+ const lines=['> booting lucky_dev.sys','> loading telegram bots... <b>OK</b>','> connecting automation api... <b>OK</b>','> initializing premium UI... <b>OK</b>','> welcome, LUCKY DEV ⚡'];
+ let li=0,ci=0,out='';
+ function type(){
+  if(li>=lines.length){bar.style.width='100%';setTimeout(finish,450);return}
+  const line=lines[li];
+  if(ci<=line.length){out=lines.slice(0,li).join('\n')+(li>0?'\n':'')+line.slice(0,ci);
+   tx.innerHTML=out+'<span class="cursor"></span>';
+   bar.style.width=Math.round(((li+ci/line.length)/lines.length)*100)+'%';
+   ci++;setTimeout(type,14+Math.random()*22);
+  }else{li++;ci=0;setTimeout(type,180)}
+ }
+ el.addEventListener('click',finish);
+ type();
+})();
+
+</script></body></html>
